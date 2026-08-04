@@ -1,0 +1,219 @@
+:root {
+  --negro-fondo: #0d0d0d;
+  --negro-tarjeta: #161616;
+  --blanco: #ffffff;
+  --gris-texto: #a0a0a0;
+  --rojo-bestia: #e60000;
+  --rojo-hover: #ff1e1e;
+  --fuente-titulo: 'Montserrat', sans-serif;
+  --fuente-cuerpo: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--negro-fondo);
+  color: var(--blanco);
+  font-family: var(--fuente-cuerpo);
+  line-height: 1.6;
+}
+
+.texto-rojo { color: var(--rojo-bestia); }
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-rojo {
+  background-color: var(--rojo-bestia);
+  color: var(--blanco);
+}
+
+.btn-rojo:hover {
+  background-color: var(--rojo-hover);
+  transform: translateY(-2px);
+}
+
+.btn-borde {
+  border: 2px solid var(--blanco);
+  color: var(--blanco);
+}
+
+.btn-borde:hover {
+  background-color: var(--blanco);
+  color: var(--negro-fondo);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: rgba(13, 13, 13, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span { color: var(--rojo-bestia); }
+
+.nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav a:hover { 
+  color: var(--rojo-bestia); 
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+  background: linear-gradient(180deg, rgba(13,13,13,0.7) 0%, var(--negro-fondo) 100%),
+              url('../imagenes/banner-2.jpeg') center/cover no-repeat;
+}
+
+.badge {
+  background-color: var(--rojo-bestia);
+  color: var(--blanco);
+  padding: 4px 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border-radius: 3px;
+}
+
+.hero h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.hero p {
+  color: var(--gris-texto);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.hero-btns .btn { margin: 0 10px; }
+
+.destacados {
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.destacados h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.grid-burgers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.burger-card {
+  background-color: var(--negro-tarjeta);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  text-align: left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.burger-card:hover {
+  border-color: var(--rojo-bestia);
+  transform: translateY(-5px);
+}
+
+.burger-card.destacado {
+  border: 1px solid var(--rojo-bestia);
+}
+
+.burger-img {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.burger-card h3 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.burger-card p {
+  color: var(--gris-texto);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.precio {
+  font-family: var(--fuente-titulo);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--rojo-bestia);
+  display: block;
+}
+
+.banner-actitud {
+  background: linear-gradient(180deg, rgba(238, 38, 38, 0.8) 0%, rgba(205, 16, 16, 0.25) 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.banner-actitud h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 2rem;
+  color: var(--blanco);
+}
+
+.banner-actitud p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.footer {
+  padding: 40px 5%;
+  background-color: #050505;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #222;
+  color: var(--gris-texto);
+}
