@@ -534,14 +534,17 @@ body {
   margin: 0 auto;
 }
 
-.ubicacion .badge {
-  display: inline-block;
-}
-
 .ubicacion h2 {
   font-family: var(--fuente-titulo);
   font-size: 2.5rem;
   margin: 15px 0 10px;
+}
+
+.subrayado-rojo {
+  text-decoration: underline;
+  text-decoration-color: var(--rojo-bestia);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
 }
 
 .ubicacion-subtitulo {
