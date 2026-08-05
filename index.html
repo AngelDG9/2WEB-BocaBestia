@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
@@ -22,7 +23,7 @@
       <a href="#inicio">Inicio</a>
       <a href="https://bocabestia.last.shop/qr/l/boca-bestia">La Carta</a>
       <a href="#">Nosotros</a>
-      <a href="#">Ubicación</a>
+      <a href="#ubicacion">Ubicación</a>
       <a href="https://bookings.last.app/3b10a1be-e4e0-4e58-9fa3-591195b8b607/booking?_gl=1*1hvvvue*_gcl_au*MTg0ODkxNjIzNy4xNzc5MDg5NDAzLjE2MTM1ODUwNy4xNzg0NzA4MzI3LjE3ODQ3MTAwMjUuMTUzNjg0NTM3NC4xNzg0NjQxMDk0LjE3ODQ3MTAwMjU.">Reserva</a>
     </nav>
     <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
@@ -35,7 +36,7 @@
       <p>Smash burgers artesanales, pan brioche tierno y la mejor carne a la parrilla.</p>
       <div class="hero-btns">
         <a href="https://bocabestia.last.shop/qr/l/boca-bestia" class="btn btn-rojo">Ver Carta</a>
-        <a href="#" class="btn btn-borde">¿Dónde estamos?</a>
+        <a href="#ubicacion" class="btn btn-borde">¿Dónde estamos?</a>
       </div>
     </div>
   </section>
@@ -208,6 +209,59 @@
         </div>
     </section>
 
+  <section id="ubicacion" class="seccion ubicacion">
+    <div class="contenedor-ubicacion">
+      <span class="badge">JEREZ DE LA FRONTERA</span>
+      <h2>¡ENCUENTRA A <span class="texto-rojo">LA BESTIA!</span></h2>
+      <p class="ubicacion-subtitulo">Smash burgers artesanales en el corazón de Jerez. Ven a probarla.</p>
+
+      <div class="rejilla-ubicacion">
+        <div class="tarjeta-ubicacion">
+          <h3>INFORMACIÓN</h3>
+          <ul class="lista-ubicacion">
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <strong>DIRECCIÓN</strong>
+                <span>C/ San Marino, 4 · 11405 Jerez de la Frontera (junto a Carrefour)</span>
+              </div>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <div>
+                <strong>TELÉFONO</strong>
+                <a href="tel:956000000">956 000 000</a>
+              </div>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <div>
+                <strong>INSTAGRAM</strong>
+                <a href="https://www.instagram.com/bocabestia/" target="_blank" rel="noopener noreferrer">@bocabestia</a>
+              </div>
+            </li>
+          </ul>
+          <div class="ubicacion-btns">
+            <a href="https://maps.app.goo.gl/Vnzojo4ebo3zWc9ZA" target="_blank" rel="noopener noreferrer" class="btn btn-rojo">Cómo llegar</a>
+            <a href="https://bookings.last.app/3b10a1be-e4e0-4e58-9fa3-591195b8b607/booking?_gl=1*1hvvvue*_gcl_au*MTg0ODkxNjIzNy4xNzc5MDg5NDAzLjE2MTM1ODUwNy4xNzg0NzA4MzI3LjE3ODQ3MTAwMjUuMTUzNjg0NTM3NC4xNzg0NjQxMDk0LjE3ODQ3MTAwMjU." class="btn btn-borde">Reserva tu mesa</a>
+          </div>
+        </div>
+        <div class="mapa-marco">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer id="contacto" class="footer">
     <div>
       <h3>BOCABESTIA</h3>
@@ -227,5 +281,17 @@
   </footer>
 
     <script src="scripts/carrusel.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      const map = L.map('map').setView([36.6948158, -6.1173892], 16);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      }).addTo(map);
+
+      L.marker([36.6948158, -6.1173892]).addTo(map)
+        .bindPopup('<b>¡Aquí vive la Bestia!</b><br>Smash burgers · C/ San Marino, 4')
+        .openPopup();
+    </script>
 </body>
 </html>
