@@ -89,11 +89,24 @@ body {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
+}
 
+.menu-toggle-input {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  width: 32px;
+  height: auto;
 }
 
 .hero {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,14 +271,143 @@ body {
   color: var(--rojo-bestia);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 4%;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .menu-toggle img {
+    width: 34px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 200;
+  }
+
+  .header .btn-rojo {
+    order: 3;
+    width: 100%;
+    max-width: 240px;
+    margin: 8px auto 0;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 70px;
+    background-color: rgba(13, 13, 13, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+
+  .menu-toggle-input:checked + .menu-toggle + .nav {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+  }
+
+  .nav a:first-of-type {
+    border-top: none;
+  }
+
+  .hero {
+    margin-top: 50px;
+    background-position: center top;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    background: linear-gradient(180deg, rgba(13,13,13,0.7) 0%, var(--negro-fondo) 100%),
+              url('../imagenes/banner-2.jpeg') center/cover no-repeat;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .header .btn-rojo {
+    text-align: center;
+  }
+
+  .destacados {
+    padding: 60px 5%;
+  }
+
+  .destacados h2 {
+    font-size: 2rem;
+  }
+
+  .grid-burgers {
+    gap: 20px;
+  }
+
+  .banner-actitud {
+    padding: 40px 18px;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 4%;
+  }
+
+  #contacto > div:nth-of-type(2) {
+    align-items: center;
+  }
 }
 
 @media (max-width: 760px) {
   #contacto {
     flex-direction: column;
     gap: 18px;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
@@ -381,3 +523,4 @@ body {
   .carrusel-pista .tarjeta-resena { flex: 0 0 86%; }
   .carrusel-btn { width: 48px; height: 48px; font-size: 18px; }
 }
+
