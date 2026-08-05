@@ -217,3 +217,167 @@ body {
   border-top: 1px solid #222;
   color: var(--gris-texto);
 }
+
+#contacto > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.footer-contacto h3 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+  margin-top: 6px;
+}
+
+.redes-sociales {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width:100%;
+  justify-content: center;
+}
+.redes-sociales a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.footer-ig {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+  margin-top: 6px;
+}
+
+#contacto > div:nth-of-type(2) a:hover {
+  color: var(--rojo-bestia);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  #contacto {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+}
+
+.seccion.resenas {
+  padding: 60px 5%;
+  background-color: transparent;
+}
+
+.seccion.resenas .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seccion.resenas h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 2rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carrusel-ventana {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  flex: 1 1 auto;
+}
+
+.carrusel-pista {
+  display: flex;
+  gap: 20px;
+  padding: 12px 8px;
+}
+
+.carrusel-pista .tarjeta-resena {
+  flex: 0 0 calc((100% - 60px) / 4);
+  max-width: none;
+  background-color: var(--negro-tarjeta);
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 18px;
+  color: var(--blanco);
+  scroll-snap-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+.resena-cabecera {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+
+.resena-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-family: var(--fuente-titulo);
+}
+
+.resena-estrellas { color: #ffd54a; font-size: 0.95rem; }
+
+.resena-texto {
+  color: var(--blanco);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.carrusel-btn {
+  background: rgba(0,0,0,0.45);
+  color: var(--blanco);
+  border: none;
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+
+.carrusel-btn:hover { transform: scale(1.06); background: rgba(0,0,0,0.6); }
+
+.carrusel-btn-izq { margin-right: 12px; }
+.carrusel-btn-der { margin-left: 12px; }
+
+.carrusel-ventana::-webkit-scrollbar { display: none; }
+
+@media (min-width: 1100px) {
+  .carrusel-pista .tarjeta-resena { flex: 0 0 calc((100% - 60px) / 4); }
+}
+
+@media (min-width: 760px) and (max-width: 1099px) {
+  .carrusel-pista .tarjeta-resena { flex: 0 0 calc((100% - 40px) / 3); }
+}
+
+@media (max-width: 759px) {
+  .carrusel-pista .tarjeta-resena { flex: 0 0 86%; }
+  .carrusel-btn { width: 48px; height: 48px; font-size: 18px; }
+}
