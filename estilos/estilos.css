@@ -45,6 +45,9 @@ body {
   transform: translateY(-2px);
 }
 
+#compartir-opinion{
+  margin: 20px;
+}
 .btn-borde {
   border: 2px solid var(--blanco);
   color: var(--blanco);
@@ -161,12 +164,30 @@ body {
 
 .burger-card {
   background-color: var(--negro-tarjeta);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 30px;
   border-radius: 8px;
   border: 1px solid #222;
   text-align: left;
   transition: 0.3s;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.burger-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.35), rgba(13, 13, 13, 0.75));
+  pointer-events: none;
+}
+
+.burger-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .burger-card:hover {
@@ -178,10 +199,26 @@ body {
   border: 1px solid var(--rojo-bestia);
 }
 
-.burger-img {
-  font-size: 4rem;
-  margin-bottom: 15px;
-  text-align: center;
+.burger-card.hambur1 {
+  background-image: url("../imagenes/hambur1.webp");
+  opacity:0.7;
+}
+
+.burger-card.hambur2 {
+  background-image: url("../imagenes/hambur2.webp");
+  opacity:0.7;
+}
+
+.burger-card.hambur3 {
+  background-image: url("../imagenes/hambur3.webp");
+  opacity:0.7;
+}
+
+.burger-info{
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
 }
 
 .burger-card h3 {
@@ -575,6 +612,7 @@ body {
 .tarjeta-ubicacion:hover {
   border-color: var(--rojo-bestia);
   transform: translateY(-5px);
+  cursor:pointer;
 }
 
 .tarjeta-ubicacion h3 {
