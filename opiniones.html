@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Opiniones - BocaBestia Jerez</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+header{
+    background:#d62828;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+input, textarea, select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    background:#d62828;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#b71c1c;
+}
+
+.review{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-left:5px solid #d62828;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.review p{
+    margin:8px 0;
+}
+
+.delete{
+    float:right;
+    background:#444;
+    padding:6px 10px;
+    font-size:13px;
+}
+
+.delete:hover{
+    background:#222;
+}
+
+small{
+    color:gray;
+}
+
+label{
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Panel de Opiniones</h1>
+    <h3>BocaBestia Jerez</h3>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Nueva Opinión</h2>
+
+        <input type="text" id="nombre" placeholder="Nombre del cliente">
+
+        <label>🍔 Comida</label>
+        <select id="comida">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select>
+
+        <label>👨‍🍳 Servicio</label>
+        <select id="servicio">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select>
+
+        <label>🏠 Ambiente</label>
+        <select id="ambiente">
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select>
+
+        <textarea id="comentario" rows="5" placeholder="Escribe la opinión..."></textarea>
+
+        <button onclick="guardarOpinion()">Publicar Opinión</button>
+
+    </div>
+
+    <div id="opiniones"></div>
+
+</div>
+
+<script>
+
+let opiniones = JSON.parse(localStorage.getItem("opiniones")) || [];
+
+mostrarOpiniones();
+
+function guardarOpinion(){
+
+    let nombre = document.getElementById("nombre").value;
+    let comida = document.getElementById("comida").value;
+    let servicio = document.getElementById("servicio").value;
+    let ambiente = document.getElementById("ambiente").value;
+    let comentario = document.getElementById("comentario").value;
+
+    if(nombre === "" || comentario === ""){
+        alert("Completa todos los campos");
+        return;
+    }
+
+    opiniones.unshift({
+        nombre,
+        comida,
+        servicio,
+        ambiente,
+        comentario,
+        fecha: new Date().toLocaleDateString()
+    });
+
+    localStorage.setItem("opiniones", JSON.stringify(opiniones));
+
+    document.getElementById("nombre").value = "";
+    document.getElementById("comentario").value = "";
+    document.getElementById("comida").value = "5";
+    document.getElementById("servicio").value = "5";
+    document.getElementById("ambiente").value = "5";
+
+    mostrarOpiniones();
+}
+
+function mostrarOpiniones(){
+
+    let contenedor = document.getElementById("opiniones");
+
+    contenedor.innerHTML = "<h2>Opiniones Publicadas</h2>";
+
+    opiniones.forEach((opinion,index)=>{
+
+        let media = (
+            parseInt(opinion.comida) +
+            parseInt(opinion.servicio) +
+            parseInt(opinion.ambiente)
+        ) / 3;
+
+        contenedor.innerHTML += `
+        <div class="review">
+
+            <button class="delete" onclick="eliminar(${index})">
+                Eliminar
+            </button>
+
+            <h3>${opinion.nombre}</h3>
+
+            <p><strong>⭐ Media:</strong> ${media.toFixed(1)}</p>
+
+            <p><strong>🍔 Comida:</strong>
+            ${"⭐".repeat(opinion.comida)}</p>
+
+            <p><strong>👨‍🍳 Servicio:</strong>
+            ${"⭐".repeat(opinion.servicio)}</p>
+
+            <p><strong>🏠 Ambiente:</strong>
+            ${"⭐".repeat(opinion.ambiente)}</p>
+
+            <p>"${opinion.comentario}"</p>
+
+            <small>${opinion.fecha}</small>
+
+        </div>
+        `;
+    });
+}
+
+function eliminar(index){
+
+    if(confirm("¿Eliminar esta opinión?")){
+
+        opiniones.splice(index,1);
+
+        localStorage.setItem(
+            "opiniones",
+            JSON.stringify(opiniones)
+        );
+
+        mostrarOpiniones();
+    }
+}
+
+</script>
+
+</body>
+</html>
