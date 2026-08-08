@@ -72,7 +72,45 @@
     </div>
   </section>
 
-  <section id="nosotros" class="banner-actitud">
+  <section id="nosotros" class="seccion nosotros">
+    <div class="contenedor-nosotros">
+      <h2>DETRÁS DE LA <span class="texto-rojo">JAULA</span></h2>
+
+      <div class="nosotros-grid">
+        <div class="nosotros-copy">
+          <p>BocaBestia nace en 2026 en Jerez de la mano de la familia González — los de Menta — y de un fichaje de lujo: el cocinero jerezano <strong>Javier Moreno</strong>, que templó fuego en casas como Mantúa (una estrella Michelin) y Bardal.</p>
+          <p>Su cruzada es simple: quitarle la pedantería a la alta cocina y servirla para comer con las manos. Smash a la plancha, cortes de <strong>vaca vieja madurada 50 días</strong> y salsas que se hacen en casa, de cero.</p>
+          <p>Y luego está ella: la Bestia, enjaulada en la entrada del local, vigilando cada hamburguesa que sale. <strong class="texto-rojo">Pasa el ratón por la jaula.</strong> Lleva días esperándote.</p>
+        </div>
+
+        <figure class="jaula" id="jaula" tabindex="0" role="button" aria-label="Jaula de la Bestia. Al pasar el ratón o al tocarla, se abre.">
+          <img class="jaula-img" src="imagenes/gorilla_0.jpg" alt="La Bestia de BocaBestia, un gorila rugiendo">
+          <div class="jaula-hilo jaula-hilo-sup" aria-hidden="true"></div>
+          <div class="jaula-hilo jaula-hilo-inf" aria-hidden="true"></div>
+          <div class="jaula-hoja jaula-hoja-izq" aria-hidden="true"></div>
+          <div class="jaula-hoja jaula-hoja-der" aria-hidden="true"></div>
+          <figcaption class="jaula-pista">Pasa el ratón, si te atreves</figcaption>
+        </figure>
+      </div>
+
+      <div class="nosotros-datos">
+        <div class="dato">
+          <span class="dato-numero">50</span>
+          <p>días madura la vaca vieja</p>
+        </div>
+        <div class="dato">
+          <span class="dato-numero">500</span>
+          <p>burgers volaron en la apertura</p>
+        </div>
+        <div class="dato">
+          <span class="dato-numero">40</span>
+          <p>mesas te esperan (28 + 12 terraza)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner-actitud">
     <h2>100% CARNE DE CALIDAD, 0% TONTERÍAS</h2>
     <p>Ven a probar la autenticidad en el centro de Jerez.</p>
   </section>
@@ -284,6 +322,7 @@
   </footer>
 
     <script src="scripts/carrusel.js"></script>
+    <script src="scripts/bestia.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
       const map = L.map('map').setView([36.6948158, -6.1173892], 16);

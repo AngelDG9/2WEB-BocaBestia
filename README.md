@@ -12,10 +12,22 @@ HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin complicaciones: s
 
 - **Hero** — "SABORES QUE DESATAN LA BESTIA" con el badge de "NUEVO EN JEREZ", CTA a la carta, botón para pedir online (Uber Eats) y acceso directo a la ubicación.
 - **Las más bestias** — las tres hamburguesas estrella con sus precios (la Boca Bestia Burguer, por supuesto, va destacada con borde rojo).
+- **Nosotros** — "Detrás de la jaula": la historia del local con su gorila interactivo, explicada abajo.
 - **Banner de actitud** — 100% carne de calidad, 0% tonterías. Directo al grano.
 - **Reseñas** — carrusel con opiniones reales de Google, navegable con flechas y teclado.
 - **Ubicación** — "¡Encuentra a la Bestia!" con mapa oscuro y los datos del local. Recién estrenada, explicada abajo.
 - **Footer** — redes sociales y copyright.
+
+## Sección Nosotros
+
+El alma de la casa. Cuenta quiénes somos (familia González, los de Menta, y el cocinero Javier Moreno, fugado de la alta cocina) y trae el protagonista estrella: **la Bestia**, el gorila enjaulado ilustrado con IA que preside la entrada del local. Incluye:
+
+- **La jaula interactiva**: una ilustración del gorila (1600×2000) tapada por barrotes dibujados con CSS que **tiembla en reposo** y **se abre al pasar el ratón** (las hojas se deslizan y la imagen se enciende con un glow rojo). En móvil se abre sola al hacer scroll y se cierra/abre al tocar.
+- **Copy de marca**: la historia de la familia y el chef, con la línea "Pasa el ratón, si te atreves".
+- **Banda de datos**: 50 días de maduración, 500 burgers el día de la apertura y 40 mesas (28+12), en números rojos gordos.
+- **Accesibilidad**: se abre también con teclado (Enter/Espacio) y respeta `prefers-reduced-motion` (con animaciones reducidas, la jaula se muestra abierta).
+
+> Juega en `imagenes/gorilla_0.jpg` (o su `.webp`) para cambiar la ilustración, y en el bloque `.jaula` de `index.html` para tocar el copy.
 
 ## Sección Ubicación
 
