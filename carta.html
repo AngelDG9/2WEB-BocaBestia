@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Carta</title>
+  <link rel="icon" type="image/x-icon" href="imagenes/logo.jpg">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/estilos-carta.css">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">BOCA<span>BESTIA</span></div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+      <img src="imagenes/menu-hamburguesa.png" alt="Menú hamburguesa">
+    </label>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="https://bocabestia.last.shop/qr/l/boca-bestia">La Carta</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="https://bookings.last.app/3b10a1be-e4e0-4e58-9fa3-591195b8b607/booking?_gl=1*1hvvvue*_gcl_au*MTg0ODkxNjIzNy4xNzc5MDg5NDAzLjE2MTM1ODUwNy4xNzg0NzA4MzI3LjE3ODQ3MTAwMjUuMTUzNjg0NTM3NC4xNzg0NjQxMDk0LjE3ODQ3MTAwMjU.">Reserva</a>
+    </nav>
+    <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
+  </header>
+
+  <div class="container">
+    <header class="carta-intro">
+      <h1>NUESTRA CARTA</h1>
+      <p>Haz clic en cualquier plato para ver la foto ampliada y sus alérgenos.</p>
+    </header>
+
+    <h2 class="categoria-titulo">🔥 Novedades</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Patatas de la resaca', '6,90 €', 'imagenes/img-carta/novedades/novedad1.webp', 'Patatas fritas con piel, salsa Emmy casera, boloñesa de txistorra al brandy, queso payoyo y cebolla frita.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/novedades/novedad1.webp" class="item-img" alt="Patatas de la resaca">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Patatas de la resaca</span>
+              <span class="item-precio">6,90 €</span>
+            </div>
+            <p class="item-desc">Patatas fritas con piel, salsa Emmy casera, boloñesa de txistorra al brandy, queso payoyo y cebolla frita.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('HOT-DOG 6AM', '10,90 €', 'imagenes/img-carta/novedades/novedad2.webp', 'Brioche de patata largo, Frankfurt alemán frito, chili-oli de chipotle, sour cream de lima, bacon bits y palomitas de cerdo.', ['Gluten', 'Lácteos', 'Huevos'])">
+        <img src="imagenes/img-carta/novedades/novedad2.webp" class="item-img" alt="HOT-DOG 6AM">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">HOT-DOG 6AM</span>
+              <span class="item-precio">10,90 €</span>
+            </div>
+            <p class="item-desc">Brioche de patata largo, Frankfurt alemán frito, chili-oli de chipotle, sour cream de lima, bacon bits y palomitas de cerdo.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🍟 Entrantes</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Bocabestia Fries', '6,90 €', 'imagenes/img-carta/entrantes/bocabestia-fries.webp', 'Patatas fritas con piel, mermelada de cecina ahumada, mayonesa de sriracha y queso Idiazábal rallado al momento.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/entrantes/bocabestia-fries.webp" class="item-img" alt="Bocabestia Fries">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Bocabestia Fries</span>
+              <span class="item-precio">6,90 €</span>
+            </div>
+            <p class="item-desc">Patatas fritas con piel, mermelada de cecina ahumada, mayonesa de sriracha y queso Idiazábal rallado al momento.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Bacon Cheese Fries', '6,50 €', 'imagenes/img-carta/entrantes/bacon-cheese-fries.webp', 'Patatas fritas con piel, salsa cheddar, mermelada de bacon y salsa de cebolla caramelizada al amontillado.', ['Lácteos'])">
+        <img src="imagenes/img-carta/entrantes/bacon-cheese-fries.webp" class="item-img" alt="Bacon Cheese Fries">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Bacon Cheese Fries</span>
+              <span class="item-precio">6,50 €</span>
+            </div>
+            <p class="item-desc">Patatas fritas con piel, salsa cheddar, mermelada de bacon y salsa de cebolla caramelizada al amontillado.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Truffle Fries', '6,50 €', 'imagenes/img-carta/entrantes/truffle-fries.webp', 'Patatas fritas con piel con mayonesa de trufa, bacon, salsa de yema de huevo de corral y queso de cabra payoyo rallado al momento.', ['Lácteos', 'Huevos'])">
+        <img src="imagenes/img-carta/entrantes/truffle-fries.webp" class="item-img" alt="Truffle Fries">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Truffle Fries</span>
+              <span class="item-precio">6,50 €</span>
+            </div>
+            <p class="item-desc">Patatas fritas con piel con mayonesa de trufa, bacon, salsa de yema de huevo de corral y queso de cabra payoyo rallado al momento.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Sweet Parmesan - Ranch Fries', '6,90 €', 'imagenes/img-carta/entrantes/sweet-parmesan.webp', 'Boniato dulce frito y crujiente, salsa casera ranchera, crujientes de queso parmesano tostado, bacon crujiente y cebollino.', ['Lácteos'])">
+        <img src="imagenes/img-carta/entrantes/sweet-parmesan.webp" class="item-img" alt="Sweet Parmesan - Ranch Fries">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Sweet Parmesan - Ranch Fries</span>
+              <span class="item-precio">6,90 €</span>
+            </div>
+            <p class="item-desc">Boniato dulce frito y crujiente, salsa casera ranchera, crujientes de queso parmesano tostado, bacon crujiente y cebollino.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Nachos', '6,90 €', 'imagenes/img-carta/entrantes/nachos.webp', 'Totopos fritos crujientes, guiso de carne de ternera estilo Nebraska, salsa de chiles Tatemados, guacamole, pico de gallo, crema agria y maíz crujiente frito en mantequilla.', ['Lácteos'])">
+        <img src="imagenes/img-carta/entrantes/nachos.webp" class="item-img" alt="Nachos">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Nachos</span>
+              <span class="item-precio">6,90 €</span>
+            </div>
+            <p class="item-desc">Totopos fritos crujientes, guiso de carne de ternera estilo Nebraska, salsa de chiles Tatemados, guacamole, pico de gallo, crema agria y maíz crujiente frito en mantequilla.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Chicken OG Tenders Combo', '13,90 €', 'imagenes/img-carta/entrantes/chicken-tenders.webp', 'Piezas de pollo frito acompañadas de patatas fritas con piel, brioche de mantequilla y maíz tostado y un vaso de nuestra Salsa Bocabestia.', ['Gluten', 'Lácteos', 'Huevos'])">
+        <img src="imagenes/img-carta/entrantes/chicken-tenders.webp" class="item-img" alt="Chicken OG Tenders Combo">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Chicken OG Tenders Combo</span>
+              <span class="item-precio">13,90 €</span>
+            </div>
+            <p class="item-desc">Piezas de pollo frito acompañadas de patatas fritas con piel, brioche de mantequilla y maíz tostado y un vaso de nuestra Salsa Bocabestia.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Alitas 3.0', '6,90 €', 'imagenes/img-carta/entrantes/alitas.webp', 'Alitas y muslitos de pollo frito, glasé de salsa sweet chili, crema agria, bacon crujiente, polvo de doritos y piparras encurtidas.', ['Lácteos'])">
+        <img src="imagenes/img-carta/entrantes/alitas.webp" class="item-img" alt="Alitas 3.0">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Alitas 3.0</span>
+              <span class="item-precio">6,90 €</span>
+            </div>
+            <p class="item-desc">Alitas y muslitos de pollo frito, glasé de salsa sweet chili, crema agria, bacon crujiente, polvo de doritos y piparras encurtidas.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Patatas fritas o boniatos fritos', '2,50 €', 'imagenes/img-carta/entrantes/patatas.webp', 'Patatas fritas o boniatos fritos.', ['Gluten'])">
+        <img src="imagenes/img-carta/entrantes/patatas.webp" class="item-img" alt="Patatas fritas o boniatos fritos">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Patatas fritas o boniatos fritos</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Patatas fritas o boniatos fritos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🍔 Hamburguesas</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Cheese Bestia Simple', '6,90 €', 'imagenes/img-carta/hamburguesas/cheese-simple.webp', 'Pan brioche, 1 patties smash y 1 capa de cheddar ahumado.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/cheese-simple.webp" class="item-img" alt="Cheese Bestia Simple">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cheese Bestia Simple</span>
+              <span class="item-precio">6,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 1 patties smash y 1 capa de cheddar ahumado.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cheese Bestia', '9,90 €', 'imagenes/img-carta/hamburguesas/cheese-bestia.webp', 'Pan brioche, 2 patties smash o medallón (+1€) y 2 capas de cheddar ahumado.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/cheese-bestia.webp" class="item-img" alt="Cheese Bestia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cheese Bestia</span>
+              <span class="item-precio">9,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash o medallón (+1€) y 2 capas de cheddar ahumado.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Classic Bestia', '10,90 €', 'imagenes/img-carta/hamburguesas/classic-bestia.webp', 'Pan brioche, 2 patties smash o medallón (+1€), cebolla dulce, cheddar x1, pepinillos encurtidos, bacon crujiente y salsa MacBestia.', ['Gluten', 'Lácteos', 'Mostaza'])">
+        <img src="imagenes/img-carta/hamburguesas/classic-bestia.webp" class="item-img" alt="Classic Bestia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Classic Bestia</span>
+              <span class="item-precio">10,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash o medallón (+1€), cebolla dulce, cheddar x1, pepinillos encurtidos, bacon crujiente y salsa MacBestia.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Oklahoma Butter Edition', '11,90 €', 'imagenes/img-carta/hamburguesas/oklahoma-butter.webp', 'Pan brioche, 2 patties smash, cebolla dulce al estilo Oklahoma, cheddar ahumado y mantequilla francesa entre capa y capa.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/oklahoma-butter.webp" class="item-img" alt="Oklahoma Butter Edition">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Oklahoma Butter Edition</span>
+              <span class="item-precio">11,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash, cebolla dulce al estilo Oklahoma, cheddar ahumado y mantequilla francesa entre capa y capa.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Kill Bill', '12,90 €', 'imagenes/img-carta/hamburguesas/kill-bill.webp', 'Pan brioche, 2 patties smash o medallón (+1€), cheddar ahumado, mermelada de cecina, rulo de cabra y mayonesa de huevo frito.', ['Gluten', 'Lácteos', 'Huevos'])">
+        <img src="imagenes/img-carta/hamburguesas/kill-bill.webp" class="item-img" alt="Kill Bill">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Kill Bill</span>
+              <span class="item-precio">12,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash o medallón (+1€), cheddar ahumado, mermelada de cecina, rulo de cabra y mayonesa de huevo frito.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Supreme Bacon OG', '12,90 €', 'imagenes/img-carta/hamburguesas/supreme-bacon.webp', 'Pan brioche, 2 patties smash o medallón (+1€), queso Edam, mermelada de bacon, crujiente de parmesano, salsa sour cream y mayonesa de bacon ahumado.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/supreme-bacon.webp" class="item-img" alt="Supreme Bacon OG">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Supreme Bacon OG</span>
+              <span class="item-precio">12,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash o medallón (+1€), queso Edam, mermelada de bacon, crujiente de parmesano, salsa sour cream y mayonesa de bacon ahumado.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Smoked BBQ', '11,90 €', 'imagenes/img-carta/hamburguesas/smoked-bbq.webp', 'Pan brioche, 2 patties smash o medallón (+1€), cheddar ahumado, pulled de costilla guisada en barbacoa japonesa y cebolla frita casera.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/smoked-bbq.webp" class="item-img" alt="Smoked BBQ">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Smoked BBQ</span>
+              <span class="item-precio">11,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash o medallón (+1€), cheddar ahumado, pulled de costilla guisada en barbacoa japonesa y cebolla frita casera.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Pastrami Goat', '14,90 €', 'imagenes/img-carta/hamburguesas/pastrami-goat.webp', 'Pan brioche, 2 patties smash o medallón (+1€), queso Edam, pastrami de vaca nacional ahumado, mayonesa japonesa de ajos asados y bacon bits.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/pastrami-goat.webp" class="item-img" alt="Pastrami Goat">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Pastrami Goat</span>
+              <span class="item-precio">14,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, 2 patties smash o medallón (+1€), queso Edam, pastrami de vaca nacional ahumado, mayonesa japonesa de ajos asados y bacon bits.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Boca Bestia Burger', '12,95 €', 'imagenes/img-carta/hamburguesas/boca-bestia.webp', 'Pan brioche negro y rojo, 2 patties smash o medallón (+1€), cheddar x2, mermelada de bacon, salsa Emmy, crujiente de doritos spicy y salsa Boca Bestia.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/boca-bestia.webp" class="item-img" alt="Boca Bestia Burger">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Boca Bestia Burger</span>
+              <span class="item-precio">12,95 €</span>
+            </div>
+            <p class="item-desc">Pan brioche negro y rojo, 2 patties smash o medallón (+1€), cheddar x2, mermelada de bacon, salsa Emmy, crujiente de doritos spicy y salsa Boca Bestia.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Vegan Bestia', '12,95 €', 'imagenes/img-carta/hamburguesas/vegan-bestia.webp', 'Pan brioche, patty vegana 180g, cebolla caramelizada al amontillado, pepinillos encurtidos, mayonesa de sriracha y crujiente de takis.', ['Gluten', 'Soja'])">
+        <img src="imagenes/img-carta/hamburguesas/vegan-bestia.webp" class="item-img" alt="Vegan Bestia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Vegan Bestia</span>
+              <span class="item-precio">12,95 €</span>
+            </div>
+            <p class="item-desc">Pan brioche, patty vegana 180g, cebolla caramelizada al amontillado, pepinillos encurtidos, mayonesa de sriracha y crujiente de takis.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Menú infantil', '9,90 €', 'imagenes/img-carta/hamburguesas/menu-infantil.webp', 'Cheese burger x1 patty smash, en pan brioche acompañada de patatas fritas y agua o refresco a elegir.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/hamburguesas/menu-infantil.webp" class="item-img" alt="Menú infantil">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Menú infantil</span>
+              <span class="item-precio">9,90 €</span>
+            </div>
+            <p class="item-desc">Cheese burger x1 patty smash, en pan brioche acompañada de patatas fritas y agua o refresco a elegir.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🥪 Bocadillos</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Philly Cheese Steak', '12,90 €', 'imagenes/img-carta/bocadillos/philly-cheese.webp', 'Baguette brioche artesanal con 2 patties smash picadas al momento, cebolla caramelizada, queso cheddar fundido y bacon bits.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/bocadillos/philly-cheese.webp" class="item-img" alt="Philly Cheese Steak">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Philly Cheese Steak</span>
+              <span class="item-precio">12,90 €</span>
+            </div>
+            <p class="item-desc">Baguette brioche artesanal con 2 patties smash picadas al momento, cebolla caramelizada, queso cheddar fundido y bacon bits.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cubano Crunch', '12,90 €', 'imagenes/img-carta/bocadillos/cubano-crunch.webp', 'Pan de cristal artesano con guiso de cerdo al estilo cochinita pibil, queso Edam, pepinillos encurtidos, york-queso a la plancha y mayonesa japonesa de ajos asados.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/bocadillos/cubano-crunch.webp" class="item-img" alt="Cubano Crunch">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cubano Crunch</span>
+              <span class="item-precio">12,90 €</span>
+            </div>
+            <p class="item-desc">Pan de cristal artesano con guiso de cerdo al estilo cochinita pibil, queso Edam, pepinillos encurtidos, york-queso a la plancha y mayonesa japonesa de ajos asados.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Fried Chicken Melt', '14,90 €', 'imagenes/img-carta/bocadillos/fried-chicken.webp', 'Pan brioche de maíz artesanal con pollo frito crujiente, glaseado en salsa sweet chili ahumada, encurtidos y queso Idiazábal rallado al momento.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/bocadillos/fried-chicken.webp" class="item-img" alt="Fried Chicken Melt">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Fried Chicken Melt</span>
+              <span class="item-precio">14,90 €</span>
+            </div>
+            <p class="item-desc">Pan brioche de maíz artesanal con pollo frito crujiente, glaseado en salsa sweet chili ahumada, encurtidos y queso Idiazábal rallado al momento.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Serranito Bestial', '14,90 €', 'imagenes/img-carta/bocadillos/serranito.webp', 'Nuestra versión del serranito. Pan de cristal, presa ibérica, velo de jamón ibérico, mayo de pimientos fritos, queso payoyo, chili-oli de chipotle y mini chicharrones de panceta curada.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/bocadillos/serranito.webp" class="item-img" alt="Serranito Bestial">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Serranito Bestial</span>
+              <span class="item-precio">14,90 €</span>
+            </div>
+            <p class="item-desc">Nuestra versión del serranito. Pan de cristal, presa ibérica, velo de jamón ibérico, mayo de pimientos fritos, queso payoyo, chili-oli de chipotle y mini chicharrones de panceta curada.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('K-Chopo 2.1', '14,90 €', 'imagenes/img-carta/bocadillos/kchopo.webp', 'Pan de cristal, cachopo de vaca vieja nacional, queso Edam, mermelada de cecina, salsa ranchera y cebolla frita casera.', ['Gluten', 'Lácteos'])">
+        <img src="imagenes/img-carta/bocadillos/kchopo.webp" class="item-img" alt="K-Chopo 2.1">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">K-Chopo 2.1</span>
+              <span class="item-precio">14,90 €</span>
+            </div>
+            <p class="item-desc">Pan de cristal, cachopo de vaca vieja nacional, queso Edam, mermelada de cecina, salsa ranchera y cebolla frita casera.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🥤 Bebidas</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Coca Cola', '2,75 €', 'imagenes/img-carta/bebidas/cocacola.webp', 'Botella de 500 ml.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/cocacola.webp" class="item-img" alt="Coca Cola">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Coca Cola</span>
+              <span class="item-precio">2,75 €</span>
+            </div>
+            <p class="item-desc">Botella de 500 ml.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Coca Cola Zero', '2,75 €', 'imagenes/img-carta/bebidas/cocacola-zero.webp', 'Botella de 500 ml.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/cocacola-zero.webp" class="item-img" alt="Coca Cola Zero">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Coca Cola Zero</span>
+              <span class="item-precio">2,75 €</span>
+            </div>
+            <p class="item-desc">Botella de 500 ml.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Coca Cola Zero Zero', '2,75 €', 'imagenes/img-carta/bebidas/cocacola-zero-zero.webp', 'Botella de 500 ml.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/cocacola-zero-zero.webp" class="item-img" alt="Coca Cola Zero Zero">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Coca Cola Zero Zero</span>
+              <span class="item-precio">2,75 €</span>
+            </div>
+            <p class="item-desc">Botella de 500 ml.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Fanta naranja', '2,75 €', 'imagenes/img-carta/bebidas/fanta-naranja.webp', 'Botella de 500 ml.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/fanta-naranja.webp" class="item-img" alt="Fanta naranja">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Fanta naranja</span>
+              <span class="item-precio">2,75 €</span>
+            </div>
+            <p class="item-desc">Botella de 500 ml.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Fanta limón', '2,75 €', 'imagenes/img-carta/bebidas/fanta-limon.webp', 'Botella de 500 ml.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/fanta-limon.webp" class="item-img" alt="Fanta limón">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Fanta limón</span>
+              <span class="item-precio">2,75 €</span>
+            </div>
+            <p class="item-desc">Botella de 500 ml.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Monster Ultra Strawberry Dreams', '2,50 €', 'imagenes/img-carta/bebidas/monster-rosa.webp', 'Refresco energético de fruta roja.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/monster-rosa.webp" class="item-img" alt="Monster Ultra Strawberry Dreams">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Monster Ultra Strawberry Dreams</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Refresco energético de fruta roja.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza Estrella Galicia 33cl', '2,50 €', 'imagenes/img-carta/bebidas/estrella-galicia.webp', 'Cerveza de barril.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/estrella-galicia.webp" class="item-img" alt="Cerveza Estrella Galicia 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza Estrella Galicia 33cl</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Cerveza de barril.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza Estrella Galicia 0.0 33cl', '2,50 €', 'imagenes/img-carta/bebidas/estrella-galicia-zero-zero.webp', 'Cerveza sin alcohol.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/estrella-galicia-zero-zero.webp" class="item-img" alt="Cerveza Estrella Galicia 0.0 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza Estrella Galicia 0.0 33cl</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Cerveza sin alcohol.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza Estrella Galicia Tostada 0.0 33cl', '2,50 €', 'imagenes/img-carta/bebidas/estrella-galicia-zero-zero-tostada.webp', 'Cerveza tostada y ligera, sin alcohol.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/estrella-galicia-zero-zero-tostada.webp" class="item-img" alt="Cerveza Estrella Galicia Tostada 0.0 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza Estrella Galicia Tostada 0.0 33cl</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Cerveza tostada y ligera, sin alcohol.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza Estrella Galicia sin gluten 33cl', '2,50 €', 'imagenes/img-carta/bebidas/estrella-galicia-singluten.webp', 'Cerveza sin gluten.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/estrella-galicia-singluten.webp" class="item-img" alt="Cerveza Estrella Galicia sin gluten 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza Estrella Galicia sin gluten 33cl</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Cerveza sin gluten.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza 1906 33cl', '2,80 €', 'imagenes/img-carta/bebidas/1906.webp', 'Una cerveza diferente, con mucho cuerpo, mucho carácter, robusta y auténtica.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/1906.webp" class="item-img" alt="Cerveza 1906 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza 1906 33cl</span>
+              <span class="item-precio">2,80 €</span>
+            </div>
+            <p class="item-desc">Una cerveza diferente, con mucho cuerpo, mucho carácter, robusta y auténtica.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza 1906 Red vintage 33cl', '2,80 €', 'imagenes/img-carta/bebidas/red-vintage.webp', 'Cerveza especial, con mucha personalidad.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/red-vintage.webp" class="item-img" alt="Cerveza 1906 Red vintage 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza 1906 Red vintage 33cl</span>
+              <span class="item-precio">2,80 €</span>
+            </div>
+            <p class="item-desc">Cerveza especial, con mucha personalidad.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Cerveza Radler B-Lemon 33cl', '2,50 €', 'imagenes/img-carta/bebidas/radler-blemon.webp', 'Cerveza radler con limón.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/radler-blemon.webp" class="item-img" alt="Cerveza Radler B-Lemon 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cerveza Radler B-Lemon 33cl</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Cerveza radler con limón.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Brewdog Punk ipa 33cl', '2,90 €', 'imagenes/img-carta/bebidas/brewdog.webp', 'IPA con notas cítricas y tropicales.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/brewdog.webp" class="item-img" alt="Brewdog Punk ipa 33cl">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Brewdog Punk ipa 33cl</span>
+              <span class="item-precio">2,90 €</span>
+            </div>
+            <p class="item-desc">IPA con notas cítricas y tropicales.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Caña Barril Estrella Galicia', '1,60 €', 'imagenes/img-carta/bebidas/caña-estrella-barril.webp', 'Caña de barril.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/caña-estrella-barril.webp" class="item-img" alt="Caña Barril Estrella Galicia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Caña Barril Estrella Galicia</span>
+              <span class="item-precio">1,60 €</span>
+            </div>
+            <p class="item-desc">Caña de barril.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Jarra Barril Estrella Galicia', '2,80 €', 'imagenes/img-carta/bebidas/jarra-estrella-barril.webp', 'Jarra de barril.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/jarra-estrella-barril.webp" class="item-img" alt="Jarra Barril Estrella Galicia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Jarra Barril Estrella Galicia</span>
+              <span class="item-precio">2,80 €</span>
+            </div>
+            <p class="item-desc">Jarra de barril.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Barril 1906', '2,80 €', 'imagenes/img-carta/bebidas/1906-barril.webp', 'Copa de barril.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/1906-barril.webp" class="item-img" alt="Copa Barril 1906">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Barril 1906</span>
+              <span class="item-precio">2,80 €</span>
+            </div>
+            <p class="item-desc">Copa de barril.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Caña Barril Brewdog Punk ipa', '2,20 €', 'imagenes/img-carta/bebidas/caña-brewdog-barril.webp', 'Caña de barril de IPA.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/caña-brewdog-barril.webp" class="item-img" alt="Caña Barril Brewdog Punk ipa">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Caña Barril Brewdog Punk ipa</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Caña de barril de IPA.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Barril Brewdog Punk ipa', '3,50 €', 'imagenes/img-carta/bebidas/copa-brewdog-barril.webp', 'Copa de barril de IPA.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/copa-brewdog-barril.webp" class="item-img" alt="Copa Barril Brewdog Punk ipa">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Barril Brewdog Punk ipa</span>
+              <span class="item-precio">3,50 €</span>
+            </div>
+            <p class="item-desc">Copa de barril de IPA.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Tierra Blanca verde', '2,95 €', 'imagenes/img-carta/bebidas/tiernablanca-verde.webp', 'Vino blanco joven, seco y andaluz.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/tiernablanca-verde.webp" class="item-img" alt="Copa Tierra Blanca verde">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Tierra Blanca verde</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Vino blanco joven, seco y andaluz.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Tierra Blanca azul', '2,95 €', 'imagenes/img-carta/bebidas/tiernablanca-azul.webp', 'Vino blanco joven elaborado con uvas de la región.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/tiernablanca-azul.webp" class="item-img" alt="Copa Tierra Blanca azul">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Tierra Blanca azul</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Vino blanco joven elaborado con uvas de la región.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa de Octavo Arte Verdejo', '2,95 €', 'imagenes/img-carta/bebidas/octavoarte-verdejo.webp', 'Vino blanco de la variedad Verdejo.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/octavoarte-verdejo.webp" class="item-img" alt="Copa de Octavo Arte Verdejo">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa de Octavo Arte Verdejo</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Vino blanco de la variedad Verdejo.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa de Musgo verdejo Rueda', '2,95 €', 'imagenes/img-carta/bebidas/musgo-verdejo.webp', 'Vino elaborado con la variedad 100% Verdejo.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/musgo-verdejo.webp" class="item-img" alt="Copa de Musgo verdejo Rueda">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa de Musgo verdejo Rueda</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Vino elaborado con la variedad 100% Verdejo.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Croft Twist', '2,95 €', 'imagenes/img-carta/bebidas/croft-twist.webp', 'Bebida refrescante de baja graduación.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/croft-twist.webp" class="item-img" alt="Copa Croft Twist">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Croft Twist</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Bebida refrescante de baja graduación.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Beronia', '2,95 €', 'imagenes/img-carta/bebidas/beronia.webp', 'Vino tinto con profundidad y elegancia.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/beronia.webp" class="item-img" alt="Copa Beronia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Beronia</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Vino tinto con profundidad y elegancia.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Copa Cillar de Silos', '2,95 €', 'imagenes/img-carta/bebidas/cillar-de-silos.webp', 'Vino tinto con notas de fruta madura y chocolate.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/cillar-de-silos.webp" class="item-img" alt="Copa Cillar de Silos">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Copa Cillar de Silos</span>
+              <span class="item-precio">2,95 €</span>
+            </div>
+            <p class="item-desc">Vino tinto con notas de fruta madura y chocolate.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Tinto con limón', '2,50 €', 'imagenes/img-carta/bebidas/tinto-limon.webp', 'Vino tinto servido con limón.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/tinto-limon.webp" class="item-img" alt="Tinto con limón">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Tinto con limón</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Vino tinto servido con limón.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Tinto con casera', '2,50 €', 'imagenes/img-carta/bebidas/tinto-casera.webp', 'Vino tinto servido con casera.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/tinto-casera.webp" class="item-img" alt="Tinto con casera">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Tinto con casera</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Vino tinto servido con casera.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Tinto con limón 0.0', '2,50 €', 'imagenes/img-carta/bebidas/tinto-limon-zero-zero.webp', 'Vino tinto sin alcohol con limón.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/tinto-limon-zero-zero.webp" class="item-img" alt="Tinto con limón 0.0">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Tinto con limón 0.0</span>
+              <span class="item-precio">2,50 €</span>
+            </div>
+            <p class="item-desc">Vino tinto sin alcohol con limón.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Combinado', '6,00 €', 'imagenes/img-carta/bebidas/combinado.webp', 'Bebida preparada a base de vino y refresco.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/bebidas/combinado.webp" class="item-img" alt="Combinado">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Combinado</span>
+              <span class="item-precio">6,00 €</span>
+            </div>
+            <p class="item-desc">Bebida preparada a base de vino y refresco.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🍰 Postres</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Cookies NY Style', '3,95 €', 'imagenes/img-carta/postres/cookies.webp', 'Galletas artesanas estilo New York, crujientes por fuera y jugosas por dentro.', ['Gluten', 'Lácteos', 'Huevos'])">
+        <img src="imagenes/img-carta/postres/cookies.webp" class="item-img" alt="Cookies NY Style">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Cookies NY Style</span>
+              <span class="item-precio">3,95 €</span>
+            </div>
+            <p class="item-desc">Galletas artesanas estilo New York, crujientes por fuera y jugosas por dentro.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Individual Cheesecake', '4,90 €', 'imagenes/img-carta/postres/cheesecake.webp', 'Nuestra tarta de queso individual y cremosa.', ['Lácteos', 'Gluten'])">
+        <img src="imagenes/img-carta/postres/cheesecake.webp" class="item-img" alt="Individual Cheesecake">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Individual Cheesecake</span>
+              <span class="item-precio">4,90 €</span>
+            </div>
+            <p class="item-desc">Nuestra tarta de queso individual y cremosa.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Batido helado', '4,50 €', 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800', 'Fresa, chocolate, vainilla, kinder, oreo o tiramisú.', ['Lácteos'])">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500" class="item-img" alt="Batido helado">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Batido helado</span>
+              <span class="item-precio">4,50 €</span>
+            </div>
+            <p class="item-desc">Fresa, chocolate, vainilla, kinder, oreo o tiramisú.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🧂 Salsas</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Salsa de cebolla caramelizada al vino amontillado', '2,20 €', 'imagenes/img-carta/salsas/cebolla-caramelizada.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/cebolla-caramelizada.webp" class="item-img" alt="Salsa de cebolla caramelizada al vino amontillado">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa de cebolla caramelizada al vino amontillado</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa sour cream', '2,20 €', 'imagenes/img-carta/salsas/sour-cream.webp', 'Salsa extra para complementar tus productos.', ['Lácteos'])">
+        <img src="imagenes/img-carta/salsas/sour-cream.webp" class="item-img" alt="Salsa sour cream">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa sour cream</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa emmy', '2,20 €', 'imagenes/img-carta/salsas/emmy.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/emmy.webp" class="item-img" alt="Salsa emmy">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa emmy</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa bocabestia', '2,20 €', 'imagenes/img-carta/salsas/bocabestia.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/bocabestia.webp" class="item-img" alt="Salsa bocabestia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa bocabestia</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa de ajos asados', '2,20 €', 'imagenes/img-carta/salsas/ajos-asados.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/ajos-asados.webp" class="item-img" alt="Salsa de ajos asados">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa de ajos asados</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa sweet chili', '2,20 €', 'imagenes/img-carta/salsas/sweet-chili.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/sweet-chili.webp" class="item-img" alt="Salsa sweet chili">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa sweet chili</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Mayo de bacon ahumado', '2,20 €', 'imagenes/img-carta/salsas/mayo-bacon.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/mayo-bacon.webp" class="item-img" alt="Mayo de bacon ahumado">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Mayo de bacon ahumado</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa cheddar', '2,20 €', 'imagenes/img-carta/salsas/cheddar.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/cheddar.webp" class="item-img" alt="Salsa cheddar">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa cheddar</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa trufada', '2,20 €', 'imagenes/img-carta/salsas/trufada.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/trufada.webp" class="item-img" alt="Salsa trufada">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa trufada</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Mayo sriracha', '2,20 €', 'imagenes/img-carta/salsas/sriracha.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/sriracha.webp" class="item-img" alt="Mayo sriracha">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Mayo sriracha</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Mayo de huevo frito', '2,20 €', 'imagenes/img-carta/salsas/huevo-frito.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/huevo-frito.webp" class="item-img" alt="Mayo de huevo frito">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Mayo de huevo frito</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa BBQ japonesa', '2,20 €', 'imagenes/img-carta/salsas/bbq-japonesa.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/bbq-japonesa.webp" class="item-img" alt="Salsa BBQ japonesa">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa BBQ japonesa</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Salsa de chile chipotle', '2,20 €', 'imagenes/img-carta/salsas/chile-chipotle.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/salsas/chile-chipotle.webp" class="item-img" alt="Salsa de chile chipotle">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Salsa de chile chipotle</span>
+              <span class="item-precio">2,20 €</span>
+            </div>
+            <p class="item-desc">Salsa extra para complementar tus productos.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="categoria-titulo">🧢 Merchandising</h2>
+    <div class="grid-menu">
+      <div class="item-card" onclick="openModal('Vaso', '1,00 €', 'imagenes/img-carta/merchandising/vaso.webp', 'Vaso BOCABESTIA.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/merchandising/vaso.webp" class="item-img" alt="Vaso">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Vaso</span>
+              <span class="item-precio">1,00 €</span>
+            </div>
+            <p class="item-desc">Vaso BOCABESTIA.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+
+      <div class="item-card" onclick="openModal('Caja BocaBestia', '0,75 €', 'imagenes/img-carta/merchandising/caja.webp', 'Caja para llevar BOCABESTIA.', ['Sin alérgenos'])">
+        <img src="imagenes/img-carta/merchandising/caja.webp" class="item-img" alt="Caja BocaBestia">
+        <div class="item-content">
+          <div>
+            <div class="item-header">
+              <span class="item-nombre">Caja BocaBestia</span>
+              <span class="item-precio">0,75 €</span>
+            </div>
+            <p class="item-desc">Caja para llevar BOCABESTIA.</p>
+          </div>
+          <span class="click-info">+ Ver detalles</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="productModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-btn" onclick="forceCloseModal()">&times;</span>
+      <img id="modalImg" src="" class="modal-img" alt="Producto ampliado">
+      <div class="modal-body">
+        <div class="modal-title-box">
+          <h3 id="modalTitle" class="modal-title"></h3>
+          <span id="modalPrice" class="modal-price"></span>
+        </div>
+        <p id="modalDesc" class="modal-desc"></p>
+        <div class="alergenos-section">
+          <h4>⚠️ Alérgenos presentes:</h4>
+          <div id="modalAlergenos" class="alergenos-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(nombre, precio, imgUrl, descripcion, alergenos) {
+      document.getElementById('modalTitle').innerText = nombre;
+      document.getElementById('modalPrice').innerText = precio;
+      document.getElementById('modalImg').src = imgUrl;
+      document.getElementById('modalDesc').innerText = descripcion;
+
+      const containerAlergenos = document.getElementById('modalAlergenos');
+      containerAlergenos.innerHTML = '';
+
+      alergenos.forEach(alergeno => {
+        const tag = document.createElement('span');
+        tag.className = 'alergeno-tag';
+        tag.innerHTML = `⚠️ ${alergeno}`;
+        containerAlergenos.appendChild(tag);
+      });
+
+      document.getElementById('productModal').style.display = 'flex';
+    }
+
+    function closeModal(event) {
+      if (event.target.id === 'productModal') {
+        document.getElementById('productModal').style.display = 'none';
+      }
+    }
+
+    function forceCloseModal() {
+      document.getElementById('productModal').style.display = 'none';
+    }
+  </script>
+ <footer id="contacto" class="footer">
+    <div>
+      <h3>BOCABESTIA</h3>
+      <p>Jerez de la Frontera, Cádiz</p>
+    </div>
+    <div class="footer-contacto">
+        <h3>Redes Sociales</h3>
+        <p>Síguenos en nuestras redes sociales para más novedades.</p>
+        <div class="redes-sociales">
+            <img src="imagenes/Instagram_icon.png" alt="Instagram" class="footer-ig">
+            <a href="https://www.instagram.com/bocabestia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </div>
+    <div>
+      <p>&copy; 2026 BocaBestia · 2WEB Project</p>
+    </div>
+  </footer>
+</body>
+</html>

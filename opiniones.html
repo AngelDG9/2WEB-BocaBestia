@@ -3,21 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panel de Opiniones - BocaBestia Jerez</title>
+<title>Comparte tu opinión</title>
+ <link rel="icon" type="image/x-icon" href="imagenes/logo.jpg">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilos/estilos-opiniones.css">
 </head>
 <body>
 
-<header>
-    <h1>Panel de Opiniones</h1>
-    <h3>BocaBestia Jerez</h3>
+<header class="header">
+    <div class="logo">BOCA<span>BESTIA</span></div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+      <img src="imagenes/menu-hamburguesa.png" alt="Menú hamburguesa">
+    </label>
+    <nav class="nav">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="https://bocabestia.last.shop/qr/l/boca-bestia">La Carta</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#ubicacion">Ubicación</a>
+      <a href="https://bookings.last.app/3b10a1be-e4e0-4e58-9fa3-591195b8b607/booking?_gl=1*1hvvvue*_gcl_au*MTg0ODkxNjIzNy4xNzc5MDg5NDAzLjE2MTM1ODUwNy4xNzg0NzA4MzI3LjE3ODQ3MTAwMjUuMTUzNjg0NTM3NC4xNzg0NjQxMDk0LjE3ODQ3MTAwMjU.">Reserva</a>
+    </nav>
+    <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
 </header>
 
 <div class="container">
 
     <div class="card">
 
-        <h2>Nueva Opinión</h2>
+        <h2>¡Comparte tu opinión con nosotros!</h2>
 
         <input type="text" id="nombre" placeholder="Nombre del cliente">
 
@@ -53,11 +69,25 @@
         <button onclick="guardarOpinion()">Publicar Opinión</button>
 
     </div>
-
-    <div id="opiniones"></div>
-
 </div>
 
+<footer id="contacto" class="footer">
+    <div>
+      <h3>BOCABESTIA</h3>
+      <p>Jerez de la Frontera, Cádiz</p>
+    </div>
+    <div class="footer-contacto">
+        <h3>Redes Sociales</h3>
+        <p>Síguenos en nuestras redes sociales para más novedades.</p>
+        <div class="redes-sociales">
+            <img src="imagenes/Instagram_icon.png" alt="Instagram" class="footer-ig">
+            <a href="https://www.instagram.com/bocabestia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </div>
+    <div>
+      <p>&copy; 2026 BocaBestia · 2WEB Project</p>
+    </div>
+  </footer>
 <script>
 
 let opiniones = JSON.parse(localStorage.getItem("opiniones")) || [];
