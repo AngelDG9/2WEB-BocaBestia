@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/estilos-reserva.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="imagenes/logo.jpg" type="image/x-icon">
+  <title>Reserva tu Mesa</title>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">BOCA<span>BESTIA</span></div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+      <img src="imagenes/menu-hamburguesa.png" alt="Menú hamburguesa">
+    </label>
+    <nav class="nav">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="carta.html">La Carta</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#ubicacion">Ubicación</a>
+      <a href="reserva.html">Reserva</a>
+    </nav>
+    <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
+  </header>
+
+  <div class="container">
+    <header class="reserva-header">
+      <span class="badge-top">Reserva Online</span>
+      <h1>BOCA <span>BESTIA</span></h1>
+      <p>Asegura tu sitio en el templo de la burger salvaje</p>
+    </header>
+
+    <div class="reserva-card">
+      <form id="reservaForm" onsubmit="enviarReserva(event)">
+        <div class="form-group">
+          <label for="personas">¿Cuántos sois?</label>
+          <select id="personas" class="form-control" required>
+            <option value="1 persona">1 Persona</option>
+            <option value="2 personas">2 Personas</option>
+            <option value="3 personas">3 Personas</option>
+            <option value="4 personas">4 Personas</option>
+            <option value="5 personas">5 Personas</option>
+            <option value="6 personas">6 Personas</option>
+            <option value="Grupo (+6 personas)">Más de 6 personas</option>
+          </select>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <select id="hora" class="form-control" required>
+              <option value="13:30">13:30</option>
+              <option value="14:15">14:15</option>
+              <option value="15:00">15:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:30">21:30</option>
+              <option value="22:15">22:15</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Zona Preferida</label>
+          <div class="radio-group">
+            <label class="radio-btn">
+              <input type="radio" name="zona" value="Sala Interior" checked>
+              <span class="radio-label">Interior</span>
+            </label>
+            <label class="radio-btn">
+              <input type="radio" name="zona" value="Terraza">
+              <span class="radio-label">Terraza</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" class="form-control" placeholder="Ej. Carlos Bestia" required>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" class="form-control" placeholder="600 000 000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="tu-correo@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notas">Notas Especiales (Alergias)</label>
+          <input type="text" id="notas" class="form-control" placeholder="Opcional">
+        </div>
+
+        <button type="submit" class="btn-reservar">Confirmar Reserva</button>
+        
+        <p class="aviso-reserva">Respuesta instantánea vía WhatsApp</p>
+      </form>
+    </div>
+  </div>
+  <footer id="contacto" class="footer">
+    <div>
+      <h3>BOCABESTIA</h3>
+      <p>Jerez de la Frontera, Cádiz</p>
+    </div>
+    <div class="footer-contacto">
+        <h3>Redes Sociales</h3>
+        <p>Síguenos en nuestras redes sociales para más novedades.</p>
+        <div class="redes-sociales">
+            <img src="imagenes/Instagram_icon.png" alt="Instagram" class="footer-ig">
+            <a href="https://www.instagram.com/bocabestia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </div>
+    <div>
+      <p>&copy; 2026 BocaBestia · 2WEB Project</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('fecha').min = new Date().toISOString().split('T')[0];
+
+    function enviarReserva(event) {
+      event.preventDefault();
+
+      const personas = document.getElementById('personas').value;
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+      const zona = document.querySelector('input[name="zona"]:checked').value;
+      const nombre = document.getElementById('nombre').value;
+      const telefono = document.getElementById('telefono').value;
+      const notas = document.getElementById('notas').value || 'Ninguna';
+
+      const mensaje = `¡Hola BocaBestia! Quiero solicitar una reserva:%0A` +
+        `*Nombre:* ${nombre}%0A` +
+        `*Personas:* ${personas}%0A` +
+        `*Fecha:* ${fecha}%0A` +
+        `*Hora:* ${hora}%0A` +
+        `*Zona:* ${zona}%0A` +
+        `*Teléfono:* ${telefono}%0A` +
+        `*Notas:* ${notas}`;
+
+      const numeroWhatsApp = '34600000000'; 
+      window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
+    }
+  </script>
+</body>
+</html>
