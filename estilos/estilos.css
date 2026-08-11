@@ -312,7 +312,8 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    position: relative;
+    position: sticky;
+    top: 0;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 12px;

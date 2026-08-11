@@ -27,13 +27,26 @@
     <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
   </header>
 
+  <nav class="nav-categorias">
+    <div class="scroller-categorias">
+      <a href="#novedades" class="cat-btn">🔥 Novedades</a>
+      <a href="#entrantes" class="cat-btn">🍟 Entrantes</a>
+      <a href="#hamburguesas" class="cat-btn">🍔 Hamburguesas</a>
+      <a href="#bocadillos" class="cat-btn">🥖 Bocadillos</a>
+      <a href="#bebidas" class="cat-btn">🥤 Bebidas</a>
+      <a href="#postres" class="cat-btn">🍰 Postres</a>
+      <a href="#salsas" class="cat-btn">🥫 Salsas</a>
+      <a href="#merchandising" class="cat-btn">👕 Merch</a>
+    </div>
+  </nav>
+
   <div class="container">
     <header class="carta-intro">
       <h1>NUESTRA CARTA</h1>
       <p>Haz clic en cualquier plato para ver la foto ampliada y sus alérgenos.</p>
     </header>
 
-    <h2 class="categoria-titulo">🔥 Novedades</h2>
+    <h2 id="novedades" class="categoria-titulo">🔥 Novedades</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Patatas de la resaca', '6,90 €', 'imagenes/img-carta/novedades/novedad1.webp', 'Patatas fritas con piel, salsa Emmy casera, boloñesa de txistorra al brandy, queso payoyo y cebolla frita.', ['Gluten', 'Lácteos'])">
         <img src="imagenes/img-carta/novedades/novedad1.webp" class="item-img" alt="Patatas de la resaca">
@@ -64,7 +77,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🍟 Entrantes</h2>
+    <h2 id="entrantes" class="categoria-titulo">🍟 Entrantes</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Bocabestia Fries', '6,90 €', 'imagenes/img-carta/entrantes/bocabestia-fries.webp', 'Patatas fritas con piel, mermelada de cecina ahumada, mayonesa de sriracha y queso Idiazábal rallado al momento.', ['Gluten', 'Lácteos'])">
         <img src="imagenes/img-carta/entrantes/bocabestia-fries.webp" class="item-img" alt="Bocabestia Fries">
@@ -179,7 +192,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🍔 Hamburguesas</h2>
+    <h2 id="hamburguesas" class="categoria-titulo">🍔 Hamburguesas</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Cheese Bestia Simple', '6,90 €', 'imagenes/img-carta/hamburguesas/cheese-simple.webp', 'Pan brioche, 1 patties smash y 1 capa de cheddar ahumado.', ['Gluten', 'Lácteos'])">
         <img src="imagenes/img-carta/hamburguesas/cheese-simple.webp" class="item-img" alt="Cheese Bestia Simple">
@@ -336,7 +349,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🥪 Bocadillos</h2>
+    <h2 id="bocadillos" class="categoria-titulo">🥪 Bocadillos</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Philly Cheese Steak', '12,90 €', 'imagenes/img-carta/bocadillos/philly-cheese.webp', 'Baguette brioche artesanal con 2 patties smash picadas al momento, cebolla caramelizada, queso cheddar fundido y bacon bits.', ['Gluten', 'Lácteos'])">
         <img src="imagenes/img-carta/bocadillos/philly-cheese.webp" class="item-img" alt="Philly Cheese Steak">
@@ -409,7 +422,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🥤 Bebidas</h2>
+    <h2 id="bebidas" class="categoria-titulo">🥤 Bebidas</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Coca Cola', '2,75 €', 'imagenes/img-carta/bebidas/cocacola.webp', 'Botella de 500 ml.', ['Sin alérgenos'])">
         <img src="imagenes/img-carta/bebidas/cocacola.webp" class="item-img" alt="Coca Cola">
@@ -1012,7 +1025,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🍰 Postres</h2>
+    <h2 id="postres" class="categoria-titulo">🍰 Postres</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Cookies NY Style', '3,95 €', 'imagenes/img-carta/postres/cookies.webp', 'Galletas artesanas estilo New York, crujientes por fuera y jugosas por dentro.', ['Gluten', 'Lácteos', 'Huevos'])">
         <img src="imagenes/img-carta/postres/cookies.webp" class="item-img" alt="Cookies NY Style">
@@ -1057,7 +1070,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🧂 Salsas</h2>
+    <h2 id="salsas" class="categoria-titulo">🧂 Salsas</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Salsa de cebolla caramelizada al vino amontillado', '2,20 €', 'imagenes/img-carta/salsas/cebolla-caramelizada.webp', 'Salsa extra para complementar tus productos.', ['Sin alérgenos'])">
         <img src="imagenes/img-carta/salsas/cebolla-caramelizada.webp" class="item-img" alt="Salsa de cebolla caramelizada al vino amontillado">
@@ -1242,7 +1255,7 @@
       </div>
     </div>
 
-    <h2 class="categoria-titulo">🧢 Merchandising</h2>
+    <h2 id="merchandising" class="categoria-titulo">🧢 Merchandising</h2>
     <div class="grid-menu">
       <div class="item-card" onclick="openModal('Vaso', '1,00 €', 'imagenes/img-carta/merchandising/vaso.webp', 'Vaso BOCABESTIA.', ['Sin alérgenos'])">
         <img src="imagenes/img-carta/merchandising/vaso.webp" class="item-img" alt="Vaso">
