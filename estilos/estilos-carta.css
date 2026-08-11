@@ -55,12 +55,18 @@
 
   .scroller-categorias {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 5px 20px;
+    padding: 25px 20px;
     scrollbar-width: none; 
     -ms-overflow-style: none;  
+  }
+
+  @media (max-width: 768px) {
+    .nav-categorias {
+      top: 150px;
+    }
   }
 
   .scroller-categorias::-webkit-scrollbar {
