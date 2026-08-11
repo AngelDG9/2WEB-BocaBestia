@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comparte tu opinión</title>
- <link rel="icon" type="image/x-icon" href="imagenes/logo.jpg">
+<title>Comparte tu opinión · BocaBestia</title>
+  <link rel="icon" type="image/x-icon" href="imagenes/logo.jpg">
   <link rel="stylesheet" href="estilos/estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,47 +29,77 @@
     <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
 </header>
 
-<div class="container">
+<main class="panel">
+    <div class="panel-cabecera">
+        <span class="badge">DA TU VEREDICTO</span>
+        <h1>¡HABLA, LA BESTIA <span class="texto-rojo">ESCUCHA!</span></h1>
+        <p class="panel-subtitulo">¡Las críticas son bienvenidas!</p>
+    </div>
 
-    <div class="card">
+    <div class="panel-grid">
 
-        <h2>¡Comparte tu opinión con nosotros!</h2>
+        <form class="card form-opinion" id="form-opinion" novalidate>
+            <h2>Tu veredicto</h2>
 
-        <input type="text" id="nombre" placeholder="Nombre del cliente">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" maxlength="40" placeholder="Tu nombre" autocomplete="name">
+                <p class="campo-error" id="error-nombre" hidden></p>
+            </div>
 
-        <label>🍔 Comida</label>
-        <select id="comida">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-        </select>
+            <fieldset class="campo ratings">
+                <legend>¿Cómo lo hemos hecho?</legend>
 
-        <label>👨‍🍳 Servicio</label>
-        <select id="servicio">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-        </select>
+                <div class="rating-fila">
+                    <span class="rating-etiqueta">Comida</span>
+                    <div class="rating-estrellas" data-campo="comida" role="radiogroup" aria-label="Valora la comida">
+                        <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
+                        <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
+                        <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
+                        <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
+                        <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
+                    </div>
+                </div>
 
-        <label>🏠 Ambiente</label>
-        <select id="ambiente">
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-        </select>
+                <div class="rating-fila">
+                    <span class="rating-etiqueta">Servicio</span>
+                    <div class="rating-estrellas" data-campo="servicio" role="radiogroup" aria-label="Valora el servicio">
+                        <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
+                        <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
+                        <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
+                        <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
+                        <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
+                    </div>
+                </div>
 
-        <textarea id="comentario" rows="5" placeholder="Escribe la opinión..."></textarea>
+                <div class="rating-fila">
+                    <span class="rating-etiqueta">Ambiente</span>
+                    <div class="rating-estrellas" data-campo="ambiente" role="radiogroup" aria-label="Valora el ambiente">
+                        <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
+                        <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
+                        <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
+                        <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
+                        <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
+                    </div>
+                </div>
 
-        <button onclick="guardarOpinion()">Publicar Opinión</button>
+                <p class="campo-error" id="error-ratings" hidden></p>
+            </fieldset>
+
+            <div class="campo">
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" rows="5" maxlength="500" placeholder="Lo mejor, lo mejorable, la bebida, la música… todo cuenta."></textarea>
+                <div class="campo-fila">
+                    <p class="campo-error" id="error-comentario" hidden></p>
+                    <span class="contador" id="contador">0 / 500</span>
+                </div>
+            </div>
+
+            <button type="submit" class="boton-publicar">Publicar Opinión</button>
+        </form>
 
     </div>
-</div>
+</main>
 
 <footer id="contacto" class="footer">
     <div>
@@ -87,105 +117,11 @@
     <div>
       <p>&copy; 2026 BocaBestia · 2WEB Project</p>
     </div>
-  </footer>
-<script>
+</footer>
 
-let opiniones = JSON.parse(localStorage.getItem("opiniones")) || [];
+<div class="toast" id="toast" hidden></div>
 
-mostrarOpiniones();
-
-function guardarOpinion(){
-
-    let nombre = document.getElementById("nombre").value;
-    let comida = document.getElementById("comida").value;
-    let servicio = document.getElementById("servicio").value;
-    let ambiente = document.getElementById("ambiente").value;
-    let comentario = document.getElementById("comentario").value;
-
-    if(nombre === "" || comentario === ""){
-        alert("Completa todos los campos");
-        return;
-    }
-
-    opiniones.unshift({
-        nombre,
-        comida,
-        servicio,
-        ambiente,
-        comentario,
-        fecha: new Date().toLocaleDateString()
-    });
-
-    localStorage.setItem("opiniones", JSON.stringify(opiniones));
-
-    document.getElementById("nombre").value = "";
-    document.getElementById("comentario").value = "";
-    document.getElementById("comida").value = "5";
-    document.getElementById("servicio").value = "5";
-    document.getElementById("ambiente").value = "5";
-
-    mostrarOpiniones();
-}
-
-function mostrarOpiniones(){
-
-    let contenedor = document.getElementById("opiniones");
-
-    contenedor.innerHTML = "<h2>Opiniones Publicadas</h2>";
-
-    opiniones.forEach((opinion,index)=>{
-
-        let media = (
-            parseInt(opinion.comida) +
-            parseInt(opinion.servicio) +
-            parseInt(opinion.ambiente)
-        ) / 3;
-
-        contenedor.innerHTML += `
-        <div class="review">
-
-            <button class="delete" onclick="eliminar(${index})">
-                Eliminar
-            </button>
-
-            <h3>${opinion.nombre}</h3>
-
-            <p><strong>⭐ Media:</strong> ${media.toFixed(1)}</p>
-
-            <p><strong>🍔 Comida:</strong>
-            ${"⭐".repeat(opinion.comida)}</p>
-
-            <p><strong>👨‍🍳 Servicio:</strong>
-            ${"⭐".repeat(opinion.servicio)}</p>
-
-            <p><strong>🏠 Ambiente:</strong>
-            ${"⭐".repeat(opinion.ambiente)}</p>
-
-            <p>"${opinion.comentario}"</p>
-
-            <small>${opinion.fecha}</small>
-
-        </div>
-        `;
-    });
-}
-
-function eliminar(index){
-
-    if(confirm("¿Eliminar esta opinión?")){
-
-        opiniones.splice(index,1);
-
-        localStorage.setItem(
-            "opiniones",
-            JSON.stringify(opiniones)
-        );
-
-        mostrarOpiniones();
-    }
-}
-
-</script>
+<script src="scripts/opiniones.js"></script>
 
 </body>
 </html>

@@ -41,6 +41,17 @@ La añadimos para que nadie se pierda buscando el local. Incluye:
 
 > Ojo: el teléfono que aparece es de prueba. Cuando tengamos el real, se cambia en `index.html`.
 
+## Sección Opiniones
+
+"¡Habla, la Bestia escucha!" — página dedicada (`opiniones.html`) para que el personal del local grite su veredicto. Sin reseñas a la vista, solo el acto de hablar. Incluye:
+
+- **Estrellas clicables**: comida, servicio y ambiente se puntúan por separado, con preview dorado al pasar el ratón (y una pista: no te deja publicar sin puntuar todo, "valora la comida, el servicio y el ambiente para publicar").
+- **Validación con carácter**: cada campo que se queda vacío lanza su propio mensaje con el tono de la Bestia, y el comentario lleva contador hasta 500 caracteres.
+- **Toast de confirmación**: al publicar aparece "¡Opinión publicada, bestia! Gracias por hablar." y se esfuma solo a los 6 segundos.
+- **Sin backend (de momento)**: las opiniones se guardan en `localStorage` del visitante. Cuando haya un formulario de verdad, solo hay que tocar `scripts/opiniones.js` para mandar los datos a donde sea.
+
+> Toda la lógica vive en `scripts/opiniones.js`; el estilo, en `estilos/estilos-opiniones.css` (sin duplicar el header/footer, que los pone `estilos.css`).
+
 ## Cómo ejecutar
 
 1. Abrir `index.html` en cualquier navegador.
