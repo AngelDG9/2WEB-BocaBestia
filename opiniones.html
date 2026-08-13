@@ -1,122 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comparte tu opinión · BocaBestia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparte tu opinión · BocaBestia</title>
   <link rel="icon" type="image/x-icon" href="imagenes/logo.jpg">
   <link rel="stylesheet" href="estilos/estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="estilos/estilos-opiniones.css">
+  <link rel="stylesheet" href="estilos/estilos-opiniones.css">
 </head>
 <body>
 
 <header class="header">
-    <div class="logo">BOCA<span>BESTIA</span></div>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
-    <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
-      <img src="imagenes/menu-hamburguesa.png" alt="Menú hamburguesa">
-    </label>
-    <nav class="nav">
-      <a href="index.html#inicio">Inicio</a>
-      <a href="carta.html">La Carta</a>
-      <a href="index.html#nosotros">Nosotros</a>
-      <a href="index.html#ubicacion">Ubicación</a>
-      <a href="reserva.html">Reserva</a>
-    </nav>
-    <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
+  <div class="logo">BOCA<span>BESTIA</span></div>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+  <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+    <img src="imagenes/menu-hamburguesa.png" alt="Menú hamburguesa">
+  </label>
+  <nav class="nav">
+    <a href="index.html#inicio">Inicio</a>
+    <a href="carta.html">La Carta</a>
+    <a href="index.html#nosotros">Nosotros</a>
+    <a href="index.html#ubicacion">Ubicación</a>
+    <a href="reserva.html">Reserva</a>
+  </nav>
+  <a href="https://www.ubereats.com/es/store/bocabestia-jerez/Wji_4HXeWGeH31o7zRoD1A?srsltid=AfmBOoqhJCSY1oyDkX2ZfFhng03Me69ej4izlgKsJas9yPGN5HKDivDR" class="btn btn-rojo">Pide Online</a>
 </header>
 
 <main class="panel">
-    <div class="panel-cabecera">
-        <span class="badge">DA TU VEREDICTO</span>
-        <h1>¡HABLA, LA BESTIA <span class="texto-rojo">ESCUCHA!</span></h1>
-        <p class="panel-subtitulo">¡Las críticas son bienvenidas!</p>
+  <div class="panel-cabecera">
+    <span class="badge">DA TU VEREDICTO</span>
+    <h1>¡HABLA, LA BESTIA <span class="texto-rojo">ESCUCHA!</span></h1>
+    <p class="panel-subtitulo">¡Las críticas son bienvenidas!</p>
+  </div>
+
+  <div class="panel-grid">
+    <form class="card form-opinion" id="form-opinion" novalidate>
+      <h2>Tu veredicto</h2>
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" maxlength="40" placeholder="Tu nombre" autocomplete="name">
+        <p class="campo-error" id="error-nombre" hidden></p>
+      </div>
+
+      <fieldset class="campo ratings">
+        <legend>¿Cómo lo hemos hecho?</legend>
+
+        <div class="rating-fila">
+          <span class="rating-etiqueta">Comida</span>
+          <div class="rating-estrellas" data-campo="comida" role="radiogroup" aria-label="Valora la comida">
+            <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
+            <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
+            <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
+            <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
+            <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
+          </div>
+        </div>
+
+        <div class="rating-fila">
+          <span class="rating-etiqueta">Servicio</span>
+          <div class="rating-estrellas" data-campo="servicio" role="radiogroup" aria-label="Valora el servicio">
+            <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
+            <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
+            <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
+            <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
+            <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
+          </div>
+        </div>
+
+        <div class="rating-fila">
+          <span class="rating-etiqueta">Ambiente</span>
+          <div class="rating-estrellas" data-campo="ambiente" role="radiogroup" aria-label="Valora el ambiente">
+            <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
+            <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
+            <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
+            <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
+            <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
+          </div>
+        </div>
+
+        <p class="campo-error" id="error-ratings" hidden></p>
+      </fieldset>
+
+      <div class="campo">
+        <label for="comentario">Comentario</label>
+        <textarea id="comentario" rows="5" maxlength="500" placeholder="Lo mejor, lo mejorable, la bebida, la música… todo cuenta."></textarea>
+        <div class="campo-fila">
+          <p class="campo-error" id="error-comentario" hidden></p>
+          <span class="contador" id="contador">0 / 500</span>
+        </div>
+      </div>
+
+      <button type="submit" class="boton-publicar">Publicar Opinión</button>
+    </form>
+  </div>
+
+  <div class="stats-header">
+    <span class="badge">EL VEREDICTO DE LA CALLE</span>
+  </div>
+  <div class="stats-comunidad">
+    <div class="stat-box">
+      <span class="stat-numero">4.9 ★</span>
+      <span class="stat-label">Valoración Media</span>
     </div>
-
-    <div class="panel-grid">
-
-        <form class="card form-opinion" id="form-opinion" novalidate>
-            <h2>Tu veredicto</h2>
-
-            <div class="campo">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" maxlength="40" placeholder="Tu nombre" autocomplete="name">
-                <p class="campo-error" id="error-nombre" hidden></p>
-            </div>
-
-            <fieldset class="campo ratings">
-                <legend>¿Cómo lo hemos hecho?</legend>
-
-                <div class="rating-fila">
-                    <span class="rating-etiqueta">Comida</span>
-                    <div class="rating-estrellas" data-campo="comida" role="radiogroup" aria-label="Valora la comida">
-                        <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
-                        <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
-                        <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
-                        <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
-                        <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
-                    </div>
-                </div>
-
-                <div class="rating-fila">
-                    <span class="rating-etiqueta">Servicio</span>
-                    <div class="rating-estrellas" data-campo="servicio" role="radiogroup" aria-label="Valora el servicio">
-                        <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
-                        <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
-                        <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
-                        <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
-                        <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
-                    </div>
-                </div>
-
-                <div class="rating-fila">
-                    <span class="rating-etiqueta">Ambiente</span>
-                    <div class="rating-estrellas" data-campo="ambiente" role="radiogroup" aria-label="Valora el ambiente">
-                        <button type="button" class="estrella" value="1" aria-label="1 estrella">★</button>
-                        <button type="button" class="estrella" value="2" aria-label="2 estrellas">★</button>
-                        <button type="button" class="estrella" value="3" aria-label="3 estrellas">★</button>
-                        <button type="button" class="estrella" value="4" aria-label="4 estrellas">★</button>
-                        <button type="button" class="estrella" value="5" aria-label="5 estrellas">★</button>
-                    </div>
-                </div>
-
-                <p class="campo-error" id="error-ratings" hidden></p>
-            </fieldset>
-
-            <div class="campo">
-                <label for="comentario">Comentario</label>
-                <textarea id="comentario" rows="5" maxlength="500" placeholder="Lo mejor, lo mejorable, la bebida, la música… todo cuenta."></textarea>
-                <div class="campo-fila">
-                    <p class="campo-error" id="error-comentario" hidden></p>
-                    <span class="contador" id="contador">0 / 500</span>
-                </div>
-            </div>
-
-            <button type="submit" class="boton-publicar">Publicar Opinión</button>
-        </form>
-
+    <div class="stat-divider"></div>
+    <div class="stat-box">
+      <span class="stat-numero">+1.2k</span>
+      <span class="stat-label">Opiniones Salvajes</span>
     </div>
+  </div>
+
 </main>
 
 <footer id="contacto" class="footer">
-    <div>
-      <h3>BOCABESTIA</h3>
-      <p>Jerez de la Frontera, Cádiz</p>
+  <div>
+    <h3>BOCABESTIA</h3>
+    <p>Jerez de la Frontera, Cádiz</p>
+  </div>
+  <div class="footer-contacto">
+    <h3>Redes Sociales</h3>
+    <p>Síguenos en nuestras redes sociales para más novedades.</p>
+    <div class="redes-sociales">
+      <img src="imagenes/Instagram_icon.png" alt="Instagram" class="footer-ig">
+      <a href="https://www.instagram.com/bocabestia/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
-    <div class="footer-contacto">
-        <h3>Redes Sociales</h3>
-        <p>Síguenos en nuestras redes sociales para más novedades.</p>
-        <div class="redes-sociales">
-            <img src="imagenes/Instagram_icon.png" alt="Instagram" class="footer-ig">
-            <a href="https://www.instagram.com/bocabestia/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-    </div>
-    <div>
-      <p>&copy; 2026 BocaBestia · 2WEB Project</p>
-    </div>
+  </div>
+  <div>
+    <p>&copy; 2026 BocaBestia · 2WEB Project</p>
+  </div>
 </footer>
 
 <div class="toast" id="toast" hidden></div>
